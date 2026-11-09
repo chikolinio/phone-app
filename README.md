@@ -33,6 +33,7 @@ Data is written to `daily-command-center.db` in the app's private storage and su
 
 ```sh
 npm run typecheck
+npm run check:native
 npm test
 npm run format:check
 npx expo install --check
@@ -72,3 +73,5 @@ The first configuration links your Expo project and may add `extra.eas.projectId
 - Formatting: checked with Prettier.
 
 No Android emulator/ADB or Expo cloud credentials were available in this workspace. Native device acceptance tests and an EAS cloud build remain to be run. No APK has been built or claimed. The app does not provide reminders, notifications, sync or authentication.
+
+Android builds explicitly pin the SDK-compatible `expo-font` package. The native metadata check detects missing publication versions that would otherwise fail during Gradle settings evaluation.
