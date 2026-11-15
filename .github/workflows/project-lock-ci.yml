@@ -29,3 +29,22 @@ jobs:
         run: npm run format:check
       - name: Native configuration
         run: npm run check:native
+
+  readiness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Generate evidence-based readiness report
+        run: node scripts/project-lock-readiness.mjs
+      - name: Publish report to job summary
+        run: cat project-lock-output/RELEASE_READINESS.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload readiness evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: project-lock-readiness
+          path: project-lock-output/
+          retention-days: 30
