@@ -1,0 +1,62 @@
+{
+  "project": "phone-app",
+  "policy": "Evidence must identify candidate commit and passing checks; do not infer verification from a green badge alone.",
+  "gates": [
+    {
+      "id": "baseline",
+      "title": "Reconcile local and remote baseline",
+      "weight": 10,
+      "critical": true,
+      "status": "pending",
+      "evidence": ""
+    },
+    {
+      "id": "ci",
+      "title": "CI on selected release candidate",
+      "weight": 20,
+      "critical": true,
+      "status": "pending",
+      "evidence": ""
+    },
+    {
+      "id": "android",
+      "title": "Real Android installation and smoke tests",
+      "weight": 30,
+      "critical": true,
+      "status": "pending",
+      "evidence": ""
+    },
+    {
+      "id": "data",
+      "title": "Persistence and offline/error behavior",
+      "weight": 20,
+      "critical": true,
+      "status": "pending",
+      "evidence": ""
+    },
+    {
+      "id": "quality",
+      "title": "Permissions and accessibility",
+      "weight": 10,
+      "critical": true,
+      "status": "pending",
+      "evidence": ""
+    },
+    {
+      "id": "distribution",
+      "title": "Release build and distribution validation",
+      "weight": 5,
+      "critical": true,
+      "status": "pending",
+      "evidence": ""
+    },
+    {
+      "id": "approval",
+      "title": "Owner release approval",
+      "weight": 5,
+      "critical": true,
+      "status": "pending",
+      "evidence": ""
+    }
+  ]
+}
