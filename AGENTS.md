@@ -1,0 +1,2 @@
+# Project Lock — Daily Command Center
+Read RELEASE_PLAN.md, RELEASE_CHECKLIST.md and IDEA_VAULT.md first. Inspect local git status and remote refs; preserve unpushed changes. Focus on the smallest installable Android release. Choose 30–60-minute verifiable tasks; park optional features. Run actual tests and record commit-specific evidence. Never deploy, publish, overwrite data or make destructive changes without explicit approval. End with completed work, tests, blockers, commit and next task.
